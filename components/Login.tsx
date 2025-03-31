@@ -14,29 +14,29 @@ const Login = () => {
   return (
     
     <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>
-          Bem vindo!
-        </Text>
-        <Text style={styles.subheading}>
-          Por favor, insira seu nome para continuar:
-        </Text>
-    
-      </View>
-      <View style={styles.inputs}>
-        <TextInput
-          style={styles.input}
-          placeholder="Digite seu nome"
-          value={name}
-          onChangeText={setName}
-        />
-      </View>
+      <View style={styles.box}>
+        <View>
+          <Text style={styles.title}>
+            Bem vindo!
+          </Text>
+          <Text style={styles.subheading}>
+            Por favor, insira seu nome para continuar:
+          </Text>
+      
+        </View>
+        <View style={styles.inputs}>
+          <TextInput
+            style={styles.input}
+            placeholder="Digite seu nome"
+            value={name}
+            onChangeText={setName}
+          />
+        </View>
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Entrar</Text>
-      </TouchableOpacity>
-      
-      
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
+      </View>      
     </View>
   );
 };
@@ -47,9 +47,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 16,
     alignItems: 'center',
+    backgroundColor: '#240046',
+  },
+  box:{
+    backgroundColor: '#eee9f0',
+    width: '50%',
+    borderRadius: 30,
+    alignItems: 'center',
+    height: '40%',
+    justifyContent: 'center',
   },
   title:{
-    fontSize: 25,
+    fontSize: 28,
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
@@ -58,7 +67,7 @@ const styles = StyleSheet.create({
   subheading:{
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 17,
     paddingBottom: 20,
   },
   input: {
@@ -66,24 +75,26 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 12,
     paddingHorizontal: 8,
-    width: '85%',
+    width: '100%',
     borderStyle: 'solid',
-    borderColor: 'lightgrey',
+    borderColor: '#bfbfbf',
     borderWidth: 1,
-    borderRadius: 15,
+    borderRadius: 10,
+    fontSize: 16,
+    backgroundColor: 'white',
   },
   inputs:{
-    width: '70%',
+    width: '90%',
     justifyContent: 'center',
     alignItems: 'center',
   },
   button:{
-    backgroundColor: '#0582CA',
+    backgroundColor: '#5a189a',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    width: '60%',
-    borderRadius: 15,
+    width: '90%',
+    borderRadius: 10,
   },
   buttonText:{
     color: 'white',
