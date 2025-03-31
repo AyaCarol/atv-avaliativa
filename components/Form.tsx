@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   box:{
     backgroundColor: '#eee9f0',
-    width: '50%',
+    width: '80%',
     borderRadius: 30,
     alignItems: 'center',
     height: '40%',
@@ -63,13 +63,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
-    paddingBottom: 10,
   },
   subheading:{
     justifyContent: 'center',
     textAlign: 'center',
     fontSize: 17,
-    paddingBottom: 20,
+    padding: 20,
   },
   input: {
     display: 'flex',

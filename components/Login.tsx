@@ -5,10 +5,16 @@ import { useNavigate } from 'react-router-native';
 const Login = () => {
   const [name, setName] = useState('');
   const navigate = useNavigate();
+  const [warning, setWarning] = useState('');
 
   const handleLogin = () => {
-    localStorage.setItem('userName', name);
-    navigate('/form');
+    if(name.trim()){
+      localStorage.setItem('userName', name);
+      navigate('/form');
+    }else{
+      setWarning("Por favor, preencha o campo :(");
+    }
+    
   };
 
   return (
@@ -36,6 +42,7 @@ const Login = () => {
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
+        {warning ? <Text style={[styles.warning]}>{warning}</Text> : null}
       </View>      
     </View>
   );
@@ -51,7 +58,7 @@ const styles = StyleSheet.create({
   },
   box:{
     backgroundColor: '#eee9f0',
-    width: '50%',
+    width: '80%',
     borderRadius: 30,
     alignItems: 'center',
     height: '40%',
@@ -62,13 +69,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
-    paddingBottom: 10,
   },
   subheading:{
     justifyContent: 'center',
     textAlign: 'center',
     fontSize: 17,
-    paddingBottom: 20,
+    padding: 20,
+  },
+  warning:{
+    padding: 10,
+    color: 'red',
   },
   input: {
     display: 'flex',
