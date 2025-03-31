@@ -1,6 +1,10 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "outDir": "web-build",
+    "allowJs": true,
+    "noEmit": false,
+    "module": "esnext",
+    "target": "es5"
   }
 }

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   box:{
     backgroundColor: '#eee9f0',
-    width: '50%',
+    width: '80%',
     borderRadius: 30,
     alignItems: 'center',
     height: '50%',
@@ -49,13 +49,34 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
-    paddingBottom: 10,
+  },
+  warning:{
+    padding: 10,
+    color: 'red',
   },
   subheading:{
     justifyContent: 'center',
     textAlign: 'center',
     fontSize: 17,
-    paddingBottom: 20,
+    padding: 20,
+  },
+  input: {
+    display: 'flex',
+    height: 40,
+    marginBottom: 12,
+    paddingHorizontal: 8,
+    width: '100%',
+    borderStyle: 'solid',
+    borderColor: '#bfbfbf',
+    borderWidth: 1,
+    borderRadius: 10,
+    fontSize: 16,
+    backgroundColor: 'white',
+  },
+  inputs:{
+    width: '90%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button:{
     backgroundColor: '#5a189a',
@@ -85,7 +106,7 @@ const styles = StyleSheet.create({
   info:{
     fontSize: 17,
     fontWeight: 'bold',
-  }
+  },
 });
 
 export default Summary;

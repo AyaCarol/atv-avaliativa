@@ -6,10 +6,23 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
   const userName = localStorage.getItem('userName');
+  const [warning, setWarning] = useState('');
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSave = () => {
-    localStorage.setItem('userEmail', email);
-    navigate('/summary');
+
+    if(validateEmail(email)){
+      localStorage.setItem('userEmail', email);
+      navigate('/summary');
+    }else{
+      setWarning("Por favor, insira um e-mail válido");
+    }
+
+    
   };
 
   return (
@@ -36,6 +49,7 @@ const Form = () => {
       <TouchableOpacity style={styles.button} onPress={handleSave}>
         <Text style={styles.buttonText}>Enviar</Text>
       </TouchableOpacity>
+       {warning ? <Text style={[styles.warning]}>{warning}</Text> : null}
       </View>   
       
     </View>
@@ -63,6 +77,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  warning:{
+    padding: 10,
+    color: 'red',
   },
   subheading:{
     justifyContent: 'center',
