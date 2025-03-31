@@ -19,7 +19,7 @@ const Login = () => {
           Bem vindo!
         </Text>
         <Text style={styles.subheading}>
-          Por favor, insira seu nome para continuar
+          Por favor, insira seu nome para continuar:
         </Text>
     
       </View>
@@ -49,10 +49,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title:{
-    fontSize: 20,
+    fontSize: 25,
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
+    paddingBottom: 10,
   },
   subheading:{
     justifyContent: 'center',
@@ -65,14 +66,14 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 12,
     paddingHorizontal: 8,
-    width: '60%',
+    width: '85%',
     borderStyle: 'solid',
     borderColor: 'lightgrey',
     borderWidth: 1,
     borderRadius: 15,
   },
   inputs:{
-    width: '50%',
+    width: '70%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    width: '30%',
+    width: '60%',
     borderRadius: 15,
   },
   buttonText:{

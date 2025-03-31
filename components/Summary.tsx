@@ -35,10 +35,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title:{
-    fontSize: 20,
+    fontSize: 25,
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 'bold',
+    paddingBottom: 10,
   },
   subheading:{
     justifyContent: 'center',
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    width: '30%',
+    width: '60%',
     borderRadius: 15,
 
   },
@@ -62,12 +63,11 @@ const styles = StyleSheet.create({
   },  
   list:{
     backgroundColor: '#F0F0F0',
-    width: '40%',
+    width: '60%',
     borderRadius: 15,
     alignItems: 'flex-start',
     marginBottom: 20,
     padding: 20,
-
   },
   listlabel:{
     fontSize: 16,
